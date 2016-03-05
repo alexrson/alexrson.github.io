@@ -4,13 +4,27 @@
  <title>Lanyon</title>
  <link href="http://lanyon.getpoole.com/atom.xml" rel="self"/>
  <link href="http://lanyon.getpoole.com/"/>
- <updated>2016-03-05T14:13:42-08:00</updated>
+ <updated>2016-03-05T14:56:01-08:00</updated>
  <id>http://lanyon.getpoole.com</id>
  <author>
    <name>Mark Otto</name>
    <email>markdotto@gmail.com</email>
  </author>
 
+ 
+ <entry>
+   <title>New Post</title>
+   <link href="http://lanyon.getpoole.com/2016/03/05/new-post/"/>
+   <updated>2016-03-05T00:00:00-08:00</updated>
+   <id>http://lanyon.getpoole.com/2016/03/05/new-post</id>
+   <content type="html">&lt;h1 id=&quot;alex-is-awesome&quot;&gt;Alex is awesome&lt;/h1&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;for i in range(1):
+    pass
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+</content>
+ </entry>
  
  <entry>
    <title>Introducing Lanyon</title>
