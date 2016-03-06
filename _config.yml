@@ -23,3 +23,11 @@ version:             1.0.0
 gems: [jekyll-paginate]
 paginate: 5
 paginate_path: "page:num"
+
+
+# Site
+site:
+  github:
+    repo: https://github.com/alexrson/alexrson.github.io
+github:
+  repo: https://github.com/alexrson/alexrson.github.io
