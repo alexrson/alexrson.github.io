@@ -5,7 +5,8 @@
 <h2>Accessibility App</h2>
 
 Message:
-<p id="message"></p>
+<p id="message">- </p>
+<p id="numbers">- </p>
 <p id="row"> Row: </p>
 
 <button type="button" onclick="click1()">1</button>
@@ -13,6 +14,9 @@ Message:
 <button type="button" onclick="click3()">3</button>
 <button type="button" onclick="click4()">4</button>
 <button type="button" onclick="click5()">5</button>
+
+<button type="button" onclick="clickDelete()">Delete</button>
+
 <button type="button" onclick="clickSpace()">Space</button>
 <button type="button" onclick="clickClear()">Clear</button>
 
@@ -21,6 +25,7 @@ Message:
     var row = -1;
     var alphabet = "abcdefghijklmnopqrstuvwxy";
 function click1() {
+    document.getElementById("numbers").innerHTML += "1";
     if (state == 0)
     {
         state = 1;
@@ -30,13 +35,11 @@ function click1() {
     else
     {
       document.getElementById("message").innerHTML += alphabet[row * 5 -6 + 1];
-      console.log(1);
-      console.log(row);
-      console.log('asdf');
       state = 0;
     }
 }
 function click2() {
+    document.getElementById("numbers").innerHTML += "2";
     if (state == 0)
     {
         state = 1;
@@ -46,14 +49,12 @@ function click2() {
     else
     {
       document.getElementById("message").innerHTML += alphabet[row * 5 -6 + 2];
-      console.log(1);
-      console.log(row);
-      console.log('asdf');
       state = 0;
         document.getElementById("row").innerHTML = "Row: ";
     }
 }
 function click3() {
+    document.getElementById("numbers").innerHTML += "3";
     if (state == 0)
     {
         state = 1;
@@ -63,14 +64,12 @@ function click3() {
     else
     {
       document.getElementById("message").innerHTML += alphabet[row * 5 -6 + 3];
-      console.log(1);
-      console.log(row);
-      console.log('asdf');
       state = 0;
         document.getElementById("row").innerHTML = "Row: ";
     }
 }
 function click4() {
+    document.getElementById("numbers").innerHTML += "4";
     if (state == 0)
     {
         state = 1;
@@ -80,14 +79,12 @@ function click4() {
     else
     {
       document.getElementById("message").innerHTML += alphabet[row * 5 -6 + 4];
-      console.log(1);
-      console.log(row);
-      console.log('asdf');
       state = 0;
         document.getElementById("row").innerHTML = "Row: ";
     }
 }
 function click5() {
+    document.getElementById("numbers").innerHTML += "5";
     if (state == 0)
     {
         state = 1;
@@ -97,20 +94,42 @@ function click5() {
     else
     {
       document.getElementById("message").innerHTML += alphabet[row * 5 -6 + 5];
-      console.log(1);
-      console.log(row);
-      console.log('asdf');
       state = 0;
         document.getElementById("row").innerHTML = "Row: ";
     }
 }
-function click5() {
+function clickSpace() {
     document.getElementById("message").innerHTML += " ";
+    document.getElementById("numbers").innerHTML += " ";
+    state = 0;
 }
-function clickClear() {
-    document.getElementById("message").innerHTML = "";
+
+function clickDelete() {
+
     row = -1; 
-        document.getElementById("row").innerHTML = "Row: ";
+    document.getElementById("row").innerHTML = "Row: ";
+    if (document.getElementById("message").innerHTML.substring(document.getElementById("message").innerHTML.length - 1) == " ")
+    {
+      document.getElementById("message").innerHTML = document.getElementById("message").innerHTML.substring(0, document.getElementById("message").innerHTML.length - 1)
+        return
+    }
+
+    document.getElementById("message").innerHTML = document.getElementById("message").innerHTML.substring(0, document.getElementById("message").innerHTML.length - 1)
+
+    if (state == 0) {
+    document.getElementById("numbers").innerHTML = document.getElementById("numbers").innerHTML.substring(0, document.getElementById("numbers").innerHTML.length - 2)
+    }
+    else {
+    document.getElementById("numbers").innerHTML = document.getElementById("numbers").innerHTML.substring(0, document.getElementById("numbers").innerHTML.length - 3)
+    }
+    state = 0;
+}
+
+function clickClear() {
+    document.getElementById("message").innerHTML = "- ";
+    document.getElementById("numbers").innerHTML = "- ";
+    row = -1; 
+    document.getElementById("row").innerHTML = "Row: ";
     state = 0;
 }
 </script>
