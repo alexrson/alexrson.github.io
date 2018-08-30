@@ -2,13 +2,118 @@
 <html>
 <body>
 
-<h2>My First JavaScript</h2>
+<h2>Accessibility App</h2>
 
-<button type="button"
-onclick="document.getElementById('demo').innerHTML = Date()">
-Click me to display Date and Time.</button>
+Message:
+<p id="message"></p>
+<p id="row"> Row: </p>
 
-<p id="demo"></p>
+<button type="button" onclick="click1()">1</button>
+<button type="button" onclick="click2()">2</button>
+<button type="button" onclick="click3()">3</button>
+<button type="button" onclick="click4()">4</button>
+<button type="button" onclick="click5()">5</button>
+<button type="button" onclick="clickSpace()">Space</button>
+<button type="button" onclick="clickClear()">Clear</button>
+
+<script>
+    var state = 0;
+    var row = -1;
+    var alphabet = "abcdefghijklmnopqrstuvwxy";
+function click1() {
+    if (state == 0)
+    {
+        state = 1;
+        row = 1;
+        document.getElementById("row").innerHTML = "Row: 1 (A, B, C, D, E)";
+    } 
+    else
+    {
+      document.getElementById("message").innerHTML += alphabet[row * 5 -6 + 1];
+      console.log(1);
+      console.log(row);
+      console.log('asdf');
+      state = 0;
+    }
+}
+function click2() {
+    if (state == 0)
+    {
+        state = 1;
+        row = 2;
+        document.getElementById("row").innerHTML = "Row: 2 (FGHIJ)";
+    } 
+    else
+    {
+      document.getElementById("message").innerHTML += alphabet[row * 5 -6 + 2];
+      console.log(1);
+      console.log(row);
+      console.log('asdf');
+      state = 0;
+        document.getElementById("row").innerHTML = "Row: ";
+    }
+}
+function click3() {
+    if (state == 0)
+    {
+        state = 1;
+        row = 3;
+        document.getElementById("row").innerHTML = "Row: 3 (KLMNO)";
+    } 
+    else
+    {
+      document.getElementById("message").innerHTML += alphabet[row * 5 -6 + 3];
+      console.log(1);
+      console.log(row);
+      console.log('asdf');
+      state = 0;
+        document.getElementById("row").innerHTML = "Row: ";
+    }
+}
+function click4() {
+    if (state == 0)
+    {
+        state = 1;
+        row = 4;
+        document.getElementById("row").innerHTML = "Row: 4 (PQRST)";
+    } 
+    else
+    {
+      document.getElementById("message").innerHTML += alphabet[row * 5 -6 + 4];
+      console.log(1);
+      console.log(row);
+      console.log('asdf');
+      state = 0;
+        document.getElementById("row").innerHTML = "Row: ";
+    }
+}
+function click5() {
+    if (state == 0)
+    {
+        state = 1;
+        row = 5;
+        document.getElementById("row").innerHTML = "Row: 5 (UVWXY)";
+    } 
+    else
+    {
+      document.getElementById("message").innerHTML += alphabet[row * 5 -6 + 5];
+      console.log(1);
+      console.log(row);
+      console.log('asdf');
+      state = 0;
+        document.getElementById("row").innerHTML = "Row: ";
+    }
+}
+function click5() {
+    document.getElementById("message").innerHTML += " ";
+}
+function clickClear() {
+    document.getElementById("message").innerHTML = "";
+    row = -1; 
+        document.getElementById("row").innerHTML = "Row: ";
+    state = 0;
+}
+</script>
 
 </body>
 </html> 
